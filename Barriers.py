@@ -5,7 +5,7 @@ class Block(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.Surface((3,3))
         self.image.fill((243,216,63))
-        self.rect = self.image.get_rect(topleft = (x,y))
+        self.rect = self.image.get_rect()
 
 grid = [
 [0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0]
@@ -25,10 +25,11 @@ grid = [
 class Obstacle:
     def __init__(self,x,y):
         self.blocks_group = pygame.sprite.Group()
-        for row in range(Len(grid)):
-            for column in range(Len(grid[0])):
+        for row in range(len(grid)):
+            for column in range(len(grid[0])):
                 if grid[row][column] == 1:
                     pos_x = x + column * 3
                     pos_y = y + row * 3
-                    block - Block(pos_x, pos_y)
+                    block = Block()
+                    block.rect.topleft = (pos_x, pos_y)
                     self.blocks_group.add(block)

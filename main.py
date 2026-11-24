@@ -1,5 +1,7 @@
 import pygame
 
+from aliens import Invader 
+
 pygame.init()
 
 screen = pygame.display.set_mode((800, 600))

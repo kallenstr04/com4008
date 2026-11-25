@@ -33,3 +33,11 @@ class Obstacle:
                     block = Block()
                     block.rect.topleft = (pos_x, pos_y)
                     self.blocks_group.add(block)
+
+def check_barrier_hits(bullets, obstacles):
+    for bullet in bullets:
+        for obstacle in obstacles:
+            hits = pygame.sprite.spritecollide(bullet, obstacle.blocks_group, True)
+            if hits:
+                bullet.kill()
+                break

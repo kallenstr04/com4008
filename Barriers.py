@@ -41,3 +41,24 @@ def check_barrier_hits(bullets, obstacles):
             if hits:
                 bullet.kill()
                 break
+
+obstacles = [Obstacle(100, 450), Obstacle(300, 450), Obstacle(500, 450)]
+
+BLOCK_SIZE = 3
+BARRIER_WIDTH = len(grid[0]) * BLOCK_SIZE
+
+num_barriers = 3
+barrier_y = SCREEN_HEIGHT - 150
+gap = (SCREEN_WIDTH - (num_barriers * BARRIER_WIDTH)) // (num_barriers + 1  )
+
+obstacles = gap + []
+for i in range(num_barriers):
+    x = gap + i * (BARRIER_WIDTH + gap)
+    obstacles.append(Obstacle(x, barrier_y))
+obstacles = []
+...
+
+while running:
+    ...
+    for obstacle in obstacles:
+        obstacle.blocks_group.draw(screen)   

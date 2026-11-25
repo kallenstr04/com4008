@@ -1,4 +1,6 @@
 import pygame
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
 
 class Block(pygame.sprite.Sprite):
     def __init__(self):

@@ -1,9 +1,9 @@
 import pygame
-from Barriers import Obstacle
+from Barriers import SCREEN_WIDTH, Obstacle
 
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Space Invaders")
 clock = pygame.time.Clock()
 

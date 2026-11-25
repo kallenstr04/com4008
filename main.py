@@ -1,5 +1,6 @@
 import pygame
 from Barriers import SCREEN_WIDTH, Obstacle
+from Barriers import SCREEN_HEIGHT
 
 pygame.init()
 
